@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shah is the best</title>
+    <title>Personal Course Webpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1> If you're seeing this, welcome to Mars. </h1>
+    <div class="main">
+        <nav>
+            <div class="logo>">
+                 <img src="Images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>Made</li>
+                    <li>you</li>
+                    <li>read</li>
+                    <li>this</li>
+                    <li>:)</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="Images/mobile.png" class="mobile">
+             <div id="circle">
+                 <div class="feature one">
+                    <div>
+                        <h1>Course</h1>
+                        <p>This contains the course information
+                        <div class="dropdown">
+                        <p><span class="dropbtn">Resources</span>
+                        <div class="dropdown-content">
+                            <a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">Kurose and Ross</a>
+                            <a href="http://w3schools.com">W3Schools</a>
+                            <a href="https://www.geeksforgeeks.org/web-development/">GeeksforGeeks</a>
+                        </div>
+                    </div>
+                    </div>
+
+                 </div>
+                 <div class="feature two">
+                    <div>
+                        <h1>Browser</h1>
+                        <p>This contains information on your browser
+                        <div class="dropdown">
+                        <p><span class="dropbtn">Browser Info</span>
+                        <div class="dropdown-content">
+                            <a href="#" id="navigator">Navigator</a>
+                            <a href="#" id="window">Window</a>
+                            <a href="#" id="screen">Screen</a>
+                            <a href="#" id="location">Location</a>
+                            <a href="#" id="geolocation">Geolocation</a>
+                        </div>
+                    </div>
+                    </div>
+
+
+                 </div>
+                 <div class="feature three">
+                    <div>
+                        <h1>About</h1>
+                        <p>Hey, I'm Raymond, the developer for this page.
+                        <p>I'm a student at Queens College and currently taking CSCI355 </p><div class="dropdown">
+                        <p><span class="dropbtn">Contact Me</span>
+                        <div class="dropdown-content">
+                            <a href="Contact%20Form.html" target="_blank">Contact Me</a>
+                        </div>
+                    </div>
+                    </div>
+
+
+                 </div>
+                 <div class="feature four">
+                    <div>
+                        <h1>None</h1>
+                        <p>There is nothing here</p>
+                        <p>Made you read this too :)</p>
+                    </div>
+                 </div>
+             </div>
+        </div>
+
+        <div class="controls">
+            <img src="Images/arrow.png" id="upClk">
+            <h3>Slider</h3>
+            <img src="Images/arrow.png" id="dwnClk">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle")
+        var upClk = document.getElementById("upClk")
+        var dwnClk = document.getElementById("dwnClk")
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upClk.onclick = function(){
+            rotateSum = rotateValue + 'rotate(-90deg)';
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        dwnClk.onclick = function(){
+            rotateSum = rotateValue + 'rotate(90deg)';
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
